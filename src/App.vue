@@ -2,22 +2,27 @@
   <section class="todoapp">
     <header class="header">
       <h1>Tasks</h1>
-      <input-task @newTask="addTask"></input-task>
-      <task-list :todo-list="tasks"></task-list>
-      <router-link to="/cep">CEP</router-link>
     </header>
+    <input-task @newTask="addTask"></input-task>
+    <task-list :todo-list="tasks"></task-list>
+    <router-link to="/cep">CEP</router-link>
+    <footer-todo>
+      <p>Home MIT License</p>
+    </footer-todo>
   </section>
 </template>
 
 <script>
 import InputTask from './components/InputTask.vue'
 import TaskList from './components/TaskList.vue'
+import FooterTodo from './components/FooterTodo.vue'
 
 export default {
   name: 'App',
   components: {
     InputTask,
-    TaskList
+    TaskList,
+    FooterTodo
   },
   data () {
     return {

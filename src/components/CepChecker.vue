@@ -9,14 +9,21 @@
             <p>Estado: {{ address.estado }}</p>
         </div>
         <router-link to="/">Home</router-link>
+        <footer-todo>
+            <p>CEP MIT License</p>
+        </footer-todo>
     </section>
 </template>
 
 <script>
 import AwesomeMask from 'awesome-mask'
 import Focus from '../directives/focus'
+import FooterTodo from './FooterTodo.vue'
 
 export default {
+    components: {
+        FooterTodo
+    },
     data() {
         return {
             address: {}
