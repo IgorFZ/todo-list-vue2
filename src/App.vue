@@ -24,19 +24,9 @@ export default {
     TaskList,
     FooterTodo
   },
-  /*data () {
-    return {
-      tasks: []
-    }
-  },*/
   mounted () {
     this.$events.on('newTask', eventData => this.addTask(eventData))
-  },/*
-  methods: {
-    addTask (task) {
-      this.tasks.push(task)
-    }
-  }*/
+  },
 }
 </script>
 
