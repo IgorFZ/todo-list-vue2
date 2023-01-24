@@ -4,7 +4,7 @@
       <h1>Tasks</h1>
       <input-task @newTask="addTask"></input-task>
       <task-list :todo-list="tasks"></task-list>
-      <router-link class="" to="/cep">CEP</router-link>
+      <router-link to="/cep">CEP</router-link>
     </header>
   </section>
 </template>
