@@ -1,7 +1,7 @@
 <template>
     <section>
         <label for="">Seu CEP:</label>
-        <input @keyup.enter="checkCep" type="text">
+        <input v-focus="true" @keyup.enter="checkCep" v-mask="'99999-999'" type="text">
         <div v-show="hasAddress()">
             <p>Rua: {{ address.logradouro }}</p>
             <p>Bairro: {{ address.bairro }}</p>
@@ -13,11 +13,18 @@
 </template>
 
 <script>
+import AwesomeMask from 'awesome-mask'
+import Focus from '../directives/focus'
+
 export default {
     data() {
         return {
             address: {}
         }
+    },
+    directives: {
+        'mask': AwesomeMask,
+        'focus': Focus
     },
     methods: {
         checkCep($event) {

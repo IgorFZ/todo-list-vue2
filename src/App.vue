@@ -12,20 +12,6 @@
 <script>
 import InputTask from './components/InputTask.vue'
 import TaskList from './components/TaskList.vue'
-import { Task } from './models/Task'
-
-let tasks = []
-let task = new Task ()
-task.completed = false
-task.title = 'Example 1'
-tasks.push(task)
-
-task = new Task ()
-task.completed = false
-task.title = 'Example 2'
-tasks.push(task)
-
-console.log(tasks)
 
 export default {
   name: 'App',
@@ -35,8 +21,11 @@ export default {
   },
   data () {
     return {
-      tasks: tasks
+      tasks: []
     }
+  },
+  mounted () {
+    //this.$events.on('newTask', eventData => this.addTask(eventData))
   },
   methods: {
     addTask (task) {

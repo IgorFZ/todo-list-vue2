@@ -22,8 +22,10 @@ new Vue({
   `
 })
 
-
+//chamadas http
 import VueResource from 'vue-resource'
-
 Vue.use(VueResource)
 
+//adicionando plugins
+//import VueEvents from './plugins/events'
+//Vue.use(VueEvents)
