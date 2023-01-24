@@ -24,7 +24,7 @@ export default {
         addTask ($event) {
             let value = $event.target.value
             let task = this.createTask(value)
-            this.broadcast(task)
+            this.$store.commit('addTask', {task})
             this.clearField($event)
         },
         createTask (value) {
@@ -33,9 +33,9 @@ export default {
             task.title = value
             return task
         },
-        broadcast (task) {
-            this.$emit('newTask', task)
-        },
+        //broadcast (task) {
+            //this.$emit('newTask', task)
+        //},
         clearField () {
             this.$el.querySelector('input').value = ''
         }

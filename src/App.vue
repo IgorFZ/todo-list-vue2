@@ -3,8 +3,8 @@
     <header class="header">
       <h1>Tasks</h1>
     </header>
-    <input-task @newTask="addTask"></input-task>
-    <task-list :todo-list="tasks"></task-list>
+    <input-task></input-task>
+    <task-list></task-list>
     <router-link to="/cep">CEP</router-link>
     <footer-todo>
       <p>Home MIT License</p>
@@ -24,19 +24,19 @@ export default {
     TaskList,
     FooterTodo
   },
-  data () {
+  /*data () {
     return {
       tasks: []
     }
-  },
+  },*/
   mounted () {
-    //this.$events.on('newTask', eventData => this.addTask(eventData))
-  },
+    this.$events.on('newTask', eventData => this.addTask(eventData))
+  },/*
   methods: {
     addTask (task) {
       this.tasks.push(task)
     }
-  }
+  }*/
 }
 </script>
 

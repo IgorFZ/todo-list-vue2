@@ -19,7 +19,7 @@ export default {
     computed: {
         sortedTasks: {
             get: function () {
-                let sorted = this.todoList.slice()
+                let sorted = this.$store.state.tasks
                 return sorted.sort(function (a, b) {
                     if (a.title < b.title) return -1
                     if (a.title > b.title) return 1
@@ -33,7 +33,8 @@ export default {
     },
     methods: {
         completeTask (task) {
-            task.completed = !task.completed
+            //task.completed = !task.completed
+            this.$store.commit('completeTask', {task})
         }
     }
 }
