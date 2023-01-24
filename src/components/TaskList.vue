@@ -1,12 +1,14 @@
 <template>
     <ul class="todo-list">
-        <li v-for="(task, index) in sortedTasks" :key="index" class="task">
-            <div class="view">
-                <input type="checkbox" class="toggle" @click="completeTask(task)">
-                <label v-if="task.completed" class="todo-completed">{{ task.title }}</label>
-                <label v-else > {{ task.title }} </label>
-            </div>
-        </li>
+        <transition-group name="fade">
+            <li v-for="task in sortedTasks" :key="task.title" class="task"> <!--Navegador e o Terminal ficavam incomdodando com o index-->
+                <div class="view">
+                    <input type="checkbox" class="toggle" @click="completeTask(task)">
+                    <label v-if="task.completed" class="todo-completed">{{ task.title }}</label>
+                    <label v-else > {{ task.title }} </label>
+                </div>
+            </li>
+        </transition-group>
     </ul>
 </template>
 
@@ -41,6 +43,13 @@ export default {
 
 .todo-completed {
     text-decoration: line-through;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+    opacity: 0;
 }
 
 </style>

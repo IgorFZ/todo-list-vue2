@@ -1,6 +1,8 @@
 <template>
     <div>
-        <input type="text" class="new-todo" @keyup.enter="addTask" placeholder="What do you need to do?">
+        <transition appear name="fade">
+            <input type="text" class="new-todo" @keyup.enter="addTask" placeholder="What do you need to do?">
+        </transition>
     </div>
 </template>
 

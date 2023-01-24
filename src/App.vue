@@ -1,14 +1,12 @@
 <template>
-  <div id="app">
-    <section class="todoapp">
-      <header class="header">
-        <h1>Tasks</h1>
-        <input-task @newTask="addTask"></input-task>
-        <task-list :todo-list="tasks"></task-list>
-      </header>
-    </section>
-    <router-view/>
-  </div>
+  <section class="todoapp">
+    <header class="header">
+      <h1>Tasks</h1>
+      <input-task @newTask="addTask"></input-task>
+      <task-list :todo-list="tasks"></task-list>
+      <router-link class="" to="/cep">CEP</router-link>
+    </header>
+  </section>
 </template>
 
 <script>
@@ -49,7 +47,7 @@ export default {
 </script>
 
 <style>
-.app {
+#app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
