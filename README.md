@@ -23,7 +23,7 @@ npm run unit
 # run all tests
 npm test
 ```
-## If you have errors running the tests, try:
+### In case of errors in the tests due to Phatomjs, try:
 ```
 # Download binary openssl packages from Impish builds
 wget http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.16_amd64.deb
