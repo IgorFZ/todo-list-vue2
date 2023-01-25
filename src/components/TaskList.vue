@@ -41,11 +41,6 @@ export default {
 </script>
 
 <style>
-
-.todo-completed {
-    text-decoration: line-through;
-}
-
 .fade-enter-active, .fade-leave-active {
     transition: opacity .5s;
 }
@@ -53,4 +48,35 @@ export default {
     opacity: 0;
 }
 
+.todo-list {
+	margin: 20px;
+	padding: 0;
+	list-style: none;
+}
+.todo-list li {
+	position: relative;
+	font-size: 24px;
+	border-bottom: 1px solid #ededed;
+}
+.todo-completed{
+  text-decoration: line-through;
+}
+.todo-list li .toggle {
+	text-align: center;
+	width: 30px;
+	/* auto, since non-WebKit browsers doesn't support input styling */
+	height: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+}
+.todo-list li label {
+	word-break: break-all;
+	padding: 15px 60px 15px 15px;
+	margin-left: 45px;
+	display: block;
+	line-height: 1.2;
+	transition: color 0.4s;
+}
 </style>

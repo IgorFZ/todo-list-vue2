@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="cepChecker">
         <label for="">Seu CEP:</label>
         <input v-focus="true" @keyup.enter="checkCep" v-mask="'99999-999'" type="text">
         <div v-show="hasAddress()">
@@ -8,7 +8,10 @@
             <p>Cidade: {{ address.cidade }}</p>
             <p>Estado: {{ address.estado }}</p>
         </div>
-        <router-link to="/">Home</router-link>
+        <div>
+            <br>
+            <router-link to="/">Home</router-link>
+        </div>
         <footer-todo>
             <p>CEP MIT License</p>
         </footer-todo>
@@ -48,3 +51,25 @@ export default {
     }
 }
 </script>
+
+<style>
+.home{
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 5px;
+  text-align: center;
+}
+.cepChecker{
+  margin: 20px 0;
+  text-align: center;
+}
+.cepChecker label {
+    display: block;
+}
+.cepChecker input {
+    margin: 20px;
+    height: 2em;
+    padding: 2px;
+}
+</style>
