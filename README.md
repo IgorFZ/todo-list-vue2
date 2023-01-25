@@ -23,5 +23,16 @@ npm run unit
 # run all tests
 npm test
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## If you have errors running the tests, try:
+```
+# Download binary openssl packages from Impish builds
+wget http://security.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.16_amd64.deb
+wget http://security.ubuntu.com/ubuntu/pool/main/o/openssl/libssl-dev_1.1.1f-1ubuntu2.16_amd64.deb
+wget http://security.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb
+```
+```
+# Install downloaded binary packages
+sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb
+sudo dpkg -i libssl-dev_1.1.1f-1ubuntu2.16_amd64.deb
+sudo dpkg -i openssl_1.1.1f-1ubuntu2.16_amd64.deb
+```
